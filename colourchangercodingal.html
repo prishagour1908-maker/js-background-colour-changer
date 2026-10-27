@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: cursive;
+            font-size: 40px;
+            font-weight: bolder;
+        }
+        button{
+            background-color: blueviolet;
+            color: white;
+            font-size: 45px;
+            border-radius: 10px;
+         }
+    </style>
+</head>
+<body>
+    <h3><strong>Background Colour Changer!</strong></h3>
+    <p>Click the button to change colours!</p>
+    <button onclick="colourchange()">Click me!</button>
+
+    <script>
+        function colourchange(){
+            let red = Math.floor(Math.random()*256);
+            let green = Math.floor(Math.random()*256);
+            let blue = Math.floor(Math.random()*256);
+
+            let color = `rgb(${red},${green},${blue})`;
+
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
